@@ -7,8 +7,10 @@ supported games list:
 2. tapping simulator
 3. obby but youre a ball
 4. lumber tycoon 2
-5. ???
+5. Clicker Simulator
 6. ???
 7. ???
 8. ???
 9. ???
+
+Join the discord: https://discord.gg/dTR2ypDfnV
