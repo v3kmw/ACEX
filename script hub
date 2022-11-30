@@ -1,0 +1,109 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Script hub -- Ace X", HidePremium = false, SaveConfig = true, IntroEnabled = true, IntroText = "Welcome to Ace X"})
+
+
+OrionLib:MakeNotification({
+	Name = "Logged in!",
+	Content = "Success! You are logged in as "..Player.Name.."",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+function NotReleased()
+	OrionLib:MakeNotification({
+		Name = "Error",
+		Content = "This game is not supported!",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+function NotFunctional()
+	OrionLib:MakeNotification({
+		Name = "Error",
+		Content = "This game is patched!",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+function Working()
+	OrionLib:MakeNotification({
+		Name = "Success",
+		Content = "The script was injected!",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+function Soon()
+	OrionLib:MakeNotification({
+		Name = "Error",
+		Content = "This script is coming soon!",
+		Image = "rbxassetid://4483345998",
+		Time = 5
+	})
+end
+
+--marble rider
+
+function marble()
+    loadstring(game:HttpGet('https://pastebin.com/raw/DauL3cAh'))()
+end
+
+local Tab = Window:MakeTab({
+	Name = "Game Hub",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Marble rider",
+	Callback = function()
+		Working()
+        marble()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "Tapping Simulator",
+	Callback = function()
+		Soon()
+	 end 	
+})
+
+Tab:AddButton({
+	Name = "Obby but you're a ball",
+	Callback = function()
+		NotReleased()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "???",
+	Callback = function()
+		Soon()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "???",
+	Callback = function()
+		Soon()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "???",
+	Callback = function()
+		Soon()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "???",
+	Callback = function()
+		Soon()
+  	 end    
+})
