@@ -3,11 +3,11 @@ This is for my new script hub "Ace X", its purely experimental and made from my 
 
 supported games list:
 
-1. marble rider
+1. Clicker Simulator
 2. tapping simulator
 3. obby but youre a ball
 4. lumber tycoon 2
-5. Clicker Simulator
+5. ???
 6. ???
 7. ???
 8. ???
