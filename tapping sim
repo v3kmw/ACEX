@@ -1,0 +1,256 @@
+if game.PlaceId == 9498006165 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Player = game.Players.LocalPlayer
+local Window = OrionLib:MakeWindow({Name = "Tapping Simulator -- Ace X", HidePremium = false, SaveConfig = true, IntroEnabled = true, IntroText = "Welcome to Ace X"})
+
+OrionLib:MakeNotification({
+	Name = "Success!",
+	Content = "This is the Tapping Simulator script!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+function Hatchegg()
+    game:GetService("ReplicatedStorage").Events.HatchEgg:InvokeServer({},"Starter",1)
+end
+
+function Autorebirth()
+    while _G.Autorebirth == true do
+        game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(1)
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+function Autotap()
+    while _G.Autotap == true do
+        game:GetService("ReplicatedStorage").Events.Tap:FireServer(1)
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+function Autoclaim()
+    while _G.Autoclaim == true do
+        game:GetService("ReplicatedStorage").Events.ClaimRandomReward:FireServer()
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+function Autoupgradejump()
+    while _G.Autoupgradejump == true do
+        game:GetService("ReplicatedStorage").Events.Upgrade:FireServer("jumps")
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+function Autoupgraderebirth()
+    while _G.Autoupgraderebirth == true do
+        game:GetService("ReplicatedStorage").Events.Upgrade:FireServer("rebirthUpgrades")
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+function Autoupgradegems()
+    while _G.Autoupgradegems == true do
+        game:GetService("ReplicatedStorage").Events.Upgrade:FireServer("gemMultiplierUpgrade")
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+function Autostorage()
+    while _G.Autostorage == true do
+        game:GetService("ReplicatedStorage").Events.Upgrade:FireServer("storageUpgrade")
+        wait(.00000000000000000000000000000000000000000000001)
+end
+end
+
+
+local Tab = Window:MakeTab({
+	Name = "Autofarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddToggle({
+	Name = "Autotap",
+	Default = false,
+	Callback = function(Value)
+        _G.Autotap = Value
+        Autotap()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+        _G.Autorebirth = Value
+        Autorebirth()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Autoclaim rewards",
+	Default = false,
+	Callback = function(Value)
+        _G.Autoclaim = Value
+        Autoclaim()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Autoupgrade jumps",
+	Default = false,
+	Callback = function(Value)
+        _G.Autoupgradejump = Value
+        Autoupgradejump()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Autoupgrade rebirths",
+	Default = false,
+	Callback = function(Value)
+        _G.Autoupgraderebirth = Value
+        Autoupgraderebirth()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto upgrade gems",
+	Default = false,
+	Callback = function(Value)
+        _G.Autoupgradegems = Value
+        Autoupgradegems()
+	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto upgrade storage",
+	Default = false,
+	Callback = function(Value)
+        _G.Autostorage = Value
+        Autostorage()
+	end    
+})
+
+--eggs
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddDropdown({
+	Name = "Eggs",
+	Default = "1",
+	Options = {"Starter", "Coral", "Jungle", "Bee", "Desert", "Death", "Forest", "Dominus",},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Tab:AddButton({
+	Name = "hatch selected egg",
+	Callback = function()
+		print(value)
+  	 end    
+})
+
+Tab:AddToggle({
+	Name = "Autohatch selected egg",
+	Default = false,
+	Callback = function(Value)
+        print(value)
+	end    
+})
+
+--teleports
+
+function forest()
+    game:GetService("ReplicatedStorage").Events.Teleport:FireServer(CFrame.new(-163.984467, 987.596497, -403.339417, 1, 0, 0, 0, 1, 0, 0, 0, 1))
+end
+
+function flower()
+    game:GetService("ReplicatedStorage").Events.Teleport:FireServer(CFrame.new(-179.51564, 1524.63098, -682.498718, -1, 0, -0, -0, 1, -0, -0, 0, -1))
+end
+
+function swamp()
+    game:GetService("ReplicatedStorage").Events.Teleport:FireServer(CFrame.new(-264.358887, 2123.06299, -694.661316, -1, 0, -0, -0, 1, -0, -0, 0, -1))
+end
+
+function island()
+    
+end
+
+function island()
+    
+end
+
+local Tab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Teleport to Forest island",
+	Callback = function()
+        forest()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "Teleport to Flower island",
+	Callback = function()
+		flower()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "Teleport to Swamp island",
+	Callback = function()
+		swamp()
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "Teleport to island",
+	Callback = function()
+		print(value)
+  	 end    
+})
+
+Tab:AddButton({
+	Name = "Teleport to island",
+	Callback = function()
+		print(value)
+  	 end    
+})
+--credits
+
+local Tab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Destroy ui",
+	Callback = function()
+		print(value)
+  	 end    
+})
+
+Tab:AddLabel("Creator - v3kmw")
+
+Tab:AddLabel("Testing - v3kmw")
+
+Tab:AddLabel("Scripting - v3kmw")
+
+Tab:AddLabel("Gui - v3kmw")
+
+end
+OrionLib:Destroy()
